@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace NWD_Konsola
 {
     internal class Program
@@ -34,11 +33,13 @@ namespace NWD_Konsola
             Console.WriteLine($"NWD({a}, {b}) = {NWD(a, b)}"); 
         }
 
-        // Calculates NWD using Euklidesa algorithm
-        // a - first number
-        // b - second number
-        // returns calculated NWD
-        // author: Bartosz Kulesza
+        /**********************************************
+        nazwa funkcji: NWD
+        opis funkcji: Calculates NWD using the Euclidean algorithm
+        parametry: a – first integer (non-negative), b – second integer (non-negative)
+        zwracany typ i opis: uint, calculated NWD
+        autor: Bartosz Kulesza 4TF
+        ***********************************************/
 
 
         private static uint NWD(uint a, uint b)
