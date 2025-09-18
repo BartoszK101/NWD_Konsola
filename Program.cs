@@ -22,6 +22,13 @@ namespace NWD_Konsola
                 Console.WriteLine($"NWD({a}, {b}) = {NWD(a, b)}"); 
         }
 
+        // Calculates NWD using Euklidesa algorithm
+        // a - first number
+        // b - second number
+        // returns calculated NWD
+        // author: Bartosz Kulesza
+
+
         private static uint NWD(uint a, uint b)
         {
             while (a != b)
