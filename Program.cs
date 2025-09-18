@@ -7,19 +7,31 @@ namespace NWD_Konsola
     {
         static void Main(string[] args)
         {
+            uint a, b;
+
             // Gets a from user
             Console.Write("Podaj a: ");
-            uint a = uint.Parse(Console.ReadLine());
+
+            bool isSucces = uint.TryParse(Console.ReadLine(), out a);
+
+            if (!isSucces || a < 1)
+            {
+                Console.WriteLine("Liczba a jest niepoprawna");
+                return;
+            }
 
             // Gets b from user
             Console.Write("Podaj b: ");
-            uint b = uint.Parse(Console.ReadLine());
 
-            // Check if number is grater than 1
-            if (a < 1 || b < 1)
-                Console.WriteLine("Liczby powinny być dodatnie!");
-            else
-                Console.WriteLine($"NWD({a}, {b}) = {NWD(a, b)}"); 
+            isSucces = uint.TryParse(Console.ReadLine(), out b);
+
+            if (!isSucces || b < 1)
+            {
+                Console.WriteLine("Liczba b jest niepoprawna");
+                return;
+            }
+
+            Console.WriteLine($"NWD({a}, {b}) = {NWD(a, b)}"); 
         }
 
         // Calculates NWD using Euklidesa algorithm
